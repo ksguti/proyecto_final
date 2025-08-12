@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Detector de Emociones para gente con Alexitimia</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+
+<!-- Traductor y analizar -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div class="container">
+  <h1>Detector de Emociones para Alexitimia</h1>
+  <textarea id="inputTexto" placeholder="Escribe o pega una frase..."></textarea>
+  
+  <div class="botones">
+    <button id="btnAnalizar">Analizar emoción</button>
+    <button id="btnTraducir">Traducir a inglés</button>
+  </div>
+
+  <div id="resultado"></div>
+  <div id="descripcion"></div>
+</div>
+
+
+<div class="contenedor-proposito">
+    <div class="texto-proposito">
+        <h1>Propósito de la página</h1>
+        <p>El propósito principal es brindar una herramienta que analice y detecte el tono emocional de los mensajes recibidos, para que la persona pueda comprender mejor la intención y el estado de ánimo del interlocutor. Así, se busca reducir confusiones, mejorar la comunicación y facilitar una convivencia más saludable tanto con parejas como con familiares y amistades.</p>
+        
+        <ul>
+            <li><strong>Con una pareja:</strong> Una persona con alexitinia recibe un mensaje como "Bueno, haz lo que quieras". Sin contexto, podría interpretarlo como un comentario neutral, cuando en realidad podría expresar molestia o decepción.</li>
+            
+            <li><strong>Con un familiar:</strong> Un hermano envía "Está bien, no te preocupes". La persona con alexitinia podría pensar que realmente no pasa nada, pero en realidad el familiar podría estar triste o resentido.</li>
+            
+            <li><strong>En un momento triste:</strong> Un amigo escribe "Ya no importa..." Sin identificar el tono, la persona podría no notar que el amigo está deprimido o desanimado y dejar pasar la oportunidad de ofrecer apoyo.</li>
+        </ul>
+        <div class="imagen-proposito">
+        <img src="img/smiley-gba4caff15_1920-px6gse4neyb0si4hqigiih1j5lxv8o2u4t7hmzwk20.jpg" alt="imagen_caritas">
+    </div>
+    </div>
+</div>
+
+
+<!-- Sección de reseñas -->
+<section class="customer-reviews">
+    <h2>¿Por qué necesitamos tus reseñas?</h2>
+    <p>Esta página web fue desarrollada como parte de un proyecto final universitario por los estudiantes <span class="student" data-img="img/cat-cat-with-tongue.gif">Kevin Samuel Gutierrez Herrera</span> y <span class="student" data-img="img/Captura de pantalla 2025-08-12 120126.png">Robles Cuesta Paola Gabriela</span>, con el objetivo de ayudar a personas con alexitimia a identificar las emociones presentes en mensajes de texto o conversaciones escritas.
+
+Sabemos lo difícil que puede ser interpretar correctamente las emociones de los demás, y por eso creamos esta herramienta que, con ayuda de una API de inteligencia artificial, analiza el contenido y te indica si es tristeza, alegría, enojo, sorpresa u otra emoción.
+
+Tus reseñas son muy importantes para nosotros, porque nos permiten saber qué tan útil está siendo la página y cómo podríamos mejorarla. Aunque comenzó como un proyecto académico, con el apoyo de la comunidad podríamos seguir perfeccionándola y convertirla en una herramienta más completa y accesible para todos.</p>
+
+<!-- Contenedor donde se mostrará la imagen emergente -->
+<div id="tooltip-image" style="position:absolute; display:none; pointer-events:none; border:2px solid #ccc; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.3); width:120px; height:120px; background-size:cover; background-position:center; z-index:1000;"></div>
+
+
+    <div class="review-container">
+        <div class="review-card">
+            <p><strong>calificación a la página: ⭐⭐⭐⭐⭐</strong></p>
+            <p><i>"Siempre me costó entender si mi pareja estaba molesta o triste. Con esta página, copio lo que me dice y en segundos sé qué emoción hay detrás. Me ha ayudado a no meter la pata en momentos importantes."</i></p>
+            <div class="review-footer">
+                <img src="img/png-transparent-incognito-hd-logo.png" alt="cliente1">
+                <div>
+                    <strong>María Fernanda López</strong><br>
+                    28 años, diseñadora gráfica con alexitimia leve
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <p><strong>calificación a la página: ⭐⭐⭐⭐</strong></p>
+            <p><i>"Vivo con alexitimia desde hace años y es frustrante no saber cómo responder. Ahora, con esta herramienta, puedo detectar la emoción exacta y así dar una respuesta que realmente conecte con la otra persona."</i></p>
+            <div class="review-footer">
+                <img src="img/png-transparent-incognito-hd-logo.png" alt="cliente1">
+                <div>
+                    <strong>Javier Ramírez</strong><br>
+                    35 años, ingeniero de software con alexitimia moderada
+                </div>
+            </div>
+        </div>
+
+                <div class="review-card">
+            <p><strong>calificación a la página: ⭐⭐⭐</strong></p>
+            <p><i>"Antes, cuando mis amigos me contaban algo, no sabía si felicitarlos o consolarlos. Esta página me da claridad y me evita confusiones incómodas."</i></p>
+            <div class="review-footer">
+                <img src="img/png-transparent-incognito-hd-logo.png" alt="cliente1">
+                <div>
+                    <strong>Ana Lucía Herrera</strong><br>
+                    22 años, estudiante universitaria que apenas descubrió su alexitimia
+                </div>
+            </div>
+        </div>
+
+                <div class="review-card">
+            <p><strong>calificación a la página: ⭐⭐⭐⭐</strong></p>
+            <p><i>"No sentir o identificar emociones me ha causado problemas en el trabajo y con mi familia. Desde que uso esta página, puedo leer un mensaje, saber la emoción y reaccionar como esperan de mí."</i></p>
+            <div class="review-footer">
+                <img src="img/png-transparent-incognito-hd-logo.png" alt="cliente1">
+                <div>
+                    <strong>Carlos Méndez</strong><br>
+                    40 años, gerente de ventas diagnosticado con alexitimia hace 5 años
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <p><strong>calificación a la página: ⭐⭐⭐⭐</strong></p>
+            <p><i>"reseña 2"</i></p>
+            <div class="review-footer">
+                <img src="img/png-transparent-incognito-hd-logo.png" alt="cliente2">
+                <div>
+                    <strong>nombre de la persona</strong><br>
+                    Persona random
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2025 ksguti | trabajo final</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
