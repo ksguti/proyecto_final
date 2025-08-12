@@ -1,5 +1,5 @@
-//const API_URL = "https://api-inference.huggingface.co/models/j-hartmann/emotion-english-distilroberta-base";
-//const API_TOKEN = "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";
+//const API_URL = "https:// api-inference. huggingface.co/models/j-hartmann/emotion-english-distilroberta-base";
+//const API_TOKEN = "hf_ KcXhTVIsJchWoE NKsKtEuBLHDOggAzCWpx";
 
 const explicacionEmociones = {
   joy: "😚😌 Alegría, felicidad o entusiasmo.",
@@ -96,4 +96,5 @@ document.querySelectorAll('.student').forEach(el => {
     tooltip.style.display = 'none';
   });
 });
+
 
